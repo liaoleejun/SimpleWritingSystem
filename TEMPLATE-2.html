@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="./style/SimpleAutoTOC.css">
+    <link rel="stylesheet" href="./style/SimpleBorderText.css">
+    <link rel="stylesheet" href="./style/SimpleCiteList.css">
+    <link rel="stylesheet" href="./style/SimpleDescList.css">
+    <link rel="stylesheet" href="./style/SimpleParagraphIndent.css">
+    <link rel="stylesheet" href="./style/SimpleTooltip.css">
+    <link rel="stylesheet" href="./style/SimpleWritingSystem.css">
+
+    <!-- jQuery必须是第一个js-->
+    <script type="application/javascript" src="./script/jquery-3.3.1.js"></script>
+
+    <!-- SimpleWritingSystem.js必须在SimpleTooltip.js之前 -->
+    <script type="application/javascript" src="./script/SimpleWritingSystem.js"></script>
+    <script type="application/javascript" src="./script/SimpleTooltip.js"></script>
+
+    <!-- SimpleCiteList.js, SimpleDescList.js必须在SimpleAutoNOH.js, SimpleAutoTOC.js之前 -->
+    <script type="application/javascript" src="./script/SimpleCiteList.js"></script>
+    <script type="application/javascript" src="./script/SimpleDescList.js"></script>
+    <script type="application/javascript" src="./script/SimpleAutoNOH.js"></script>
+    <script type="application/javascript" src="./script/SimpleAutoTOC.js"></script>
+
+    <script type="application/javascript" src="./script/SimpleParagraphIndent.js"></script>
+
+    <!-- Source code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Math formula -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+        });
+    </script>
+</head>
+<body>
+<div class="timestamp">
+    <code>Created at: 2019-01-01</code><br>
+    <code>Updated at: 2019-01-16</code>
+</div>
+
+<h1>Ken Thompson</h1>
+<pre class="preface">1969年，26岁的 Ken Thompson。
+1970年，Unix元年，时间戳概念诞生。
+— 题记
+</pre>
+
+<h2>摘要</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad alias, at culpa, eius eos incidunt ipsum laudantium magnam numquam odit perferendis quae quia quibusdam reiciendis repudiandae sapiente, sunt temporibus.</p>
+<b>关键词</b>: Unix, Minix, Linux.
+
+<h2>Ken</h2>
+<p>Ken，1943年出生，1965年（22岁）本科毕业获学士学位，1966年（23岁）获得硕士学位，学士和硕士修的都是 <span data-dt="qux">EECS</span><span data-ct="foo"></span>。硕士毕业同年，他被美国前电信垄断公司AT＆T的研发部门贝尔实验室聘用，负责 <span data-dt="quux">MULTICS</span> 项目，该项目是由贝尔实验室和通用电气和MIT合作的项目，是一个庞大，雄心勃勃和创新的操作系统，旨在支持数百个并发用户，不幸的是，该项目很快就变得笨拙，再加上它难以容纳三个以上的同时用户，贝尔实验室的管理层对该项目的进展不满意，最终退出了。贝尔实验室退出 MULTICS 项目后，就不知道 Ken 去做了什么了。</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque laudantium maxime nulla numquam officiis vero, voluptatum. Excepturi incidunt nisi omnis quidem rem tempora voluptatibus. Ab eligendi facilis nesciunt ratione!</p>
+<h3>test test test test test test</h3>
+<h4>test again again again again again again</h4>
+
+<h2>提示框 SimpleTooltip.js</h2>
+<p><span data-dt="html">HTML</span><span data-ct="bar"></span></p>
+
+<h2>代码高亮 highlight.js</h2>
+<pre><code>vim ~/.bash_profile
+# export PATH
+# 修改为
+# export PATH=$PATH:/usr/local/mysql/bin
+source ~/.bash_profile
+mysql --version
+</code></pre>
+
+<h2>数学公式 MathJax.js</h2>
+<div>$a^2=1$</div>
+
+<h2>Conclusion</h2>
+<h2>本文作者</h2>
+
+<!-- List of Cites -->
+<div class="cite-list" style="display: none;">
+    <span id="foo"><a href="https://en.wikipedia.org/wiki/Ken_Thompson#1960s">https://en.wikipedia.org/wiki/Ken_Thompson#1960s</a></span>
+    <span id="bar"><a href="https://en.wikipedia.org/wiki/HTML">https://en.wikipedia.org/wiki/HTML</a></span>
+</div>
+
+<!-- List of Descriptions -->
+<div class="desc-list" style="display: none;">
+    <div id="qux">电气工程与计算机科学 Electrical Engineering and Computer Science</div>
+    <div id="quux">Multiplexed Information and Computing Service</div>
+    <div id="html">hypertext markup language</div>
+</div>
+
+</body>
+</html>
