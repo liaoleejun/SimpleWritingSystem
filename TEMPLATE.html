@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="./style/SimpleAutoTOC.css">
+    <link rel="stylesheet" href="./style/SimpleBorderText.css">
+    <link rel="stylesheet" href="./style/SimpleCiteList.css">
+    <link rel="stylesheet" href="./style/SimpleDescList.css">
+    <link rel="stylesheet" href="./style/SimpleParagraphIndent.css">
+    <link rel="stylesheet" href="./style/SimpleTooltip.css">
+    <link rel="stylesheet" href="./style/SimpleWritingSystem.css">
+
+    <!-- jQuery必须是第一个js-->
+    <script type="application/javascript" src="./script/jquery-3.3.1.js"></script>
+
+    <!-- SimpleWritingSystem.js必须在SimpleTooltip.js之前 -->
+    <script type="application/javascript" src="./script/SimpleWritingSystem.js"></script>
+    <script type="application/javascript" src="./script/SimpleTooltip.js"></script>
+
+    <!-- SimpleCiteList.js, SimpleDescList.js必须在SimpleAutoNOH.js, SimpleAutoTOC.js之前 -->
+    <script type="application/javascript" src="./script/SimpleCiteList.js"></script>
+    <script type="application/javascript" src="./script/SimpleDescList.js"></script>
+    <script type="application/javascript" src="./script/SimpleAutoNOH.js"></script>
+    <script type="application/javascript" src="./script/SimpleAutoTOC.js"></script>
+
+    <script type="application/javascript" src="./script/SimpleParagraphIndent.js"></script>
+
+    <!-- Source code highlight -->
+    <link rel="stylesheet" href="./SimpleUseHighlightJS-offline/highlight/styles/default.css" />
+    <script src="./SimpleUseHighlightJS-offline/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Math formula -->
+    <script type="application/javascript" src="./SimpleUseMathJax-offline/MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+        });
+    </script>
+</head>
+<body>
+    <div class="timestamp">
+        <code>Created at: 2019-01-31</code><br>
+        <code>Updated at: 2019-01-31</code>
+    </div>
+
+    <h1>Django</h1>
+    <pre class="preface">1953年，43岁的比利时爵士吉他手Django(音译姜戈)去世；
+    2005年，以这个爵士吉他手名字命名的Python框架 - Django首次发行。
+    — 题记
+    </pre>
+
+    <h2>摘要</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad alias, at culpa, eius eos incidunt ipsum laudantium magnam numquam odit perferendis quae quia quibusdam reiciendis repudiandae sapiente, sunt temporibus.</p>
+    <b>关键词</b>: Unix, Minix, Linux.
+
+    <h2>Django之名</h2>
+    <p>有一名吉他手，叫Django，全名Django Reinhardt，本名Jean Reinhardt；也就是说Django是<span data-dt="stage-name">艺名</span>，Jean是本名。有人说，Django是<span data-dt="Romani">罗姆语</span>中的"I awake"，也有人说Django是当地的<span data-dt="Walon">瓦隆语</span>版的Jean，或者是Jean的爱称<span data-ct="wikipedia-Django_Reinhardt"></span>。</p>
+
+    <!-- List of Cites -->
+    <div class="cite-list" style="display: none;">
+        <span id="wikipedia-Django_Reinhardt"><a href="https://en.wikipedia.org/wiki/Django_Reinhardt#Early_life">https://en.wikipedia.org/wiki/Django_Reinhardt#Early_life</a></span>
+    </div>
+
+    <!-- List of Descriptions -->
+    <div class="desc-list" style="display: none;">
+        <div id="Romani">罗姆语：Romani，又称吉卜赛语或茨冈语</div>
+        <div id="Walon">瓦隆语（Walon）（中文或译瓦龙语、华隆语）属印欧语系罗曼语族的语言，是比利时境内的主要语言之一。</div>
+        <div id="stage-name">stage name</div>
+    </div>
+</body>
+</html>

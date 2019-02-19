@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+body {
+    /*font-family: "SimSun", "宋体", STSong, "华文宋体", serif;*/
+    /*font-family: SimHei", "黑体", STHeiti, "华文黑体", sans-serif;*/
+    /*font-family: "KaiTi", "楷体", STKaiti, "华文楷体", cursive;*/
+    /*font-family: fantasy;*/
+    /*font-family: monospace, sans-serif;*/
+    font-family: Helvetica, "PingFang SC", "Microsoft Yahei", "STHeiti", sans-serif;
+    font-size: 15px;
+    /*font-size: 100%;*/
+    line-height: 1.8;
+}
+
+h1, .preface, .timestamp {
+    text-align: right;
+}
+
+.timestamp {
+    font-size: 13px;
+}
+
+h1, .preface {
+    font-family: "STKaiti", "KaiTi", cursive;
+}
+
+[data-ct] {
+    border-bottom: 0;
+}
+
+/*ol#cites {list-style-type: none;}*/
+/*#cites > li:before {content: "[" counter(section, decimal) "] ";}*/
+/*#cites > li { counter-increment: section;}*/
