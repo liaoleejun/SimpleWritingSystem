@@ -41,3 +41,7 @@ h1, .preface {
 .tooltipcontent > .caret-anchor {
     display: none;
 }
+
+#treasury-of-story{
+    display: none;
+}
