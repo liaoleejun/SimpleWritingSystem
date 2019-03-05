@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="./style/SimpleDescList.css">
     <link rel="stylesheet" href="./style/SimpleParagraphIndent.css">
     <link rel="stylesheet" href="./style/SimpleTooltip.css">
-    <link rel="stylesheet" href="./style/SimpleWritingSystem.css">
+    <link rel="stylesheet" href="./style/SimpleCombine.css">
 
     <!-- jQuery必须是第一个js-->
     <script type="application/javascript" src="./script/jquery-3.3.1.js"></script>
 
     <!-- SimpleWritingSystem.js必须在SimpleTooltip.js之前 -->
-    <script type="application/javascript" src="./script/SimpleWritingSystem.js"></script>
+    <script type="application/javascript" src="script/SimpleCombine.js"></script>
     <script type="application/javascript" src="./script/SimpleTooltip.js"></script>
 
     <!-- SimpleCiteList.js, SimpleDescList.js必须在SimpleAutoNOH.js, SimpleAutoTOC.js之前 -->
@@ -48,8 +48,8 @@
 
     <h1>Django</h1>
     <pre class="preface">1953年，43岁的比利时爵士吉他手Django(音译姜戈)去世；
-    2005年，以这个爵士吉他手名字命名的Python框架 - Django首次发行。
-    — 题记
+2005年，以这个爵士吉他手名字命名的Python框架 - Django首次发行。
+— 题记
     </pre>
 
     <h2>摘要</h2>
@@ -57,11 +57,13 @@
     <b>关键词</b>: Unix, Minix, Linux.
 
     <h2>Django之名</h2>
-    <p>有一名吉他手，叫Django，全名Django Reinhardt，本名Jean Reinhardt；也就是说Django是<span data-dt="stage-name">艺名</span>，Jean是本名。有人说，Django是<span data-dt="Romani">罗姆语</span>中的"I awake"，也有人说Django是当地的<span data-dt="Walon">瓦隆语</span>版的Jean，或者是Jean的爱称<span data-ct="wikipedia-Django_Reinhardt"></span>。</p>
+    <p>有一名吉他手，叫Django，全名Django Reinhardt，本名Jean Reinhardt；也就是说Django是<a data-d="stage-name">艺名</a>，Jean是本名。有人说，Django是<a data-d="Romani">罗姆语</a>中的"I awake"，也有人说Django是当地的<a data-d="Walon">瓦隆语</a>版的Jean，或者是Jean的爱称<a data-c="wikipedia-Django_Reinhardt"></a>。</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ducimus libero mollitia sed vitae. Accusantium ad aliquid amet architecto blanditiis debitis, deleniti, deserunt doloribus eaque esse eum eveniet facilis hic illum ipsum itaque labore laborum minima minus modi nam nemo nihil nobis quae qui quia quod recusandae repudiandae tempore temporibus totam ullam ut veniam. Consequuntur est ipsam quam sapiente voluptas voluptatibus? Eaque, earum error minus nihil numquam officia officiis voluptatem. Ea eligendi facilis ipsum maxime quia recusandae repellat! Accusamus dolore doloremque ducimus, ex expedita laborum possimus rem repellat sapiente voluptatem. Ab alias aspernatur assumenda consectetur cupiditate deleniti deserunt doloremque dolorum earum est eveniet illo, ipsam ipsum iusto, laborum modi nam nostrum odio placeat porro quidem rem repellat repellendus sunt, tenetur. A deserunt dolore ducimus ea, earum facilis id ipsa iusto laudantium odit, omnis sit sunt voluptatibus. Animi architecto at, atque commodi consectetur consequatur enim et explicabo fugiat modi nobis possimus provident quam quas qui quod rerum, sapiente ullam, unde vero? Ab aperiam architecto asperiores consectetur eligendi exercitationem impedit, incidunt inventore laborum maiores maxime placeat recusandae, repudiandae suscipit voluptatem? Accusantium adipisci architecto aspernatur cumque dicta, ea earum fugit illum impedit minus nostrum porro possimus ratione rem, ullam. Placeat repellendus tenetur voluptatibus!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ducimus libero mollitia sed vitae. Accusantium ad aliquid amet architecto blanditiis debitis, deleniti, deserunt doloribus eaque esse eum eveniet facilis hic illum ipsum itaque labore laborum minima minus modi nam nemo nihil nobis quae qui quia quod recusandae repudiandae tempore temporibus totam ullam ut veniam. Consequuntur est ipsam quam sapiente voluptas voluptatibus? Eaque, earum error minus nihil numquam officia officiis voluptatem. Ea eligendi facilis ipsum maxime quia recusandae repellat! Accusamus dolore doloremque ducimus, ex expedita laborum possimus rem repellat sapiente voluptatem. Ab alias aspernatur assumenda consectetur cupiditate deleniti deserunt doloremque dolorum earum est eveniet illo, ipsam ipsum iusto, laborum modi nam nostrum odio placeat porro quidem rem repellat repellendus sunt, tenetur. A deserunt dolore ducimus ea, earum facilis id ipsa iusto laudantium odit, omnis sit sunt voluptatibus. Animi architecto at, atque commodi consectetur consequatur enim et explicabo fugiat modi nobis possimus provident quam quas qui quod rerum, sapiente ullam, unde vero? Ab aperiam architecto asperiores consectetur eligendi exercitationem impedit, incidunt inventore laborum maiores maxime placeat recusandae, repudiandae suscipit voluptatem? Accusantium adipisci architecto aspernatur cumque dicta, ea earum fugit illum impedit minus nostrum porro possimus ratione rem, ullam. Placeat repellendus tenetur voluptatibus!</p>
 
     <!-- List of Cites -->
     <div class="cite-list" style="display: none;">
-        <span id="wikipedia-Django_Reinhardt"><a href="https://en.wikipedia.org/wiki/Django_Reinhardt#Early_life">https://en.wikipedia.org/wiki/Django_Reinhardt#Early_life</a></span>
+        <span id="wikipedia-Django_Reinhardt"><a href="https://en.wikipedia.org/wiki/Django_Reinhardt#Early_life">https://en.wikipedia.org/wiki/Django_Reinhardt#Early_life</a> <a data-d="foobar">how get</a></span>
     </div>
 
     <!-- List of Descriptions -->
@@ -69,6 +71,8 @@
         <div id="Romani">罗姆语：Romani，又称吉卜赛语或茨冈语</div>
         <div id="Walon">瓦隆语（Walon）（中文或译瓦龙语、华隆语）属印欧语系罗曼语族的语言，是比利时境内的主要语言之一。</div>
         <div id="stage-name">stage name</div>
+        <div id="foobar">Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard <a data-d="baz">haapy</a> </div>
+        <div id="baz">Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard Hard </div>
     </div>
 </body>
 </html>

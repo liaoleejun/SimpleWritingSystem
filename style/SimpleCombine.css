@@ -24,10 +24,20 @@ h1, .preface {
     font-family: "STKaiti", "KaiTi", cursive;
 }
 
-[data-ct] {
+[data-c] {
     border-bottom: 0;
 }
 
 /*ol#cites {list-style-type: none;}*/
 /*#cites > li:before {content: "[" counter(section, decimal) "] ";}*/
 /*#cites > li { counter-increment: section;}*/
+
+/* 跳到锚点时, 高亮文本 */
+*:target {
+    background-color: #ffa;
+    -webkit-transition: all 1s linear;
+}
+
+.tooltipcontent > .caret-anchor {
+    display: none;
+}
