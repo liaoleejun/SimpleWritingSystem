@@ -1,30 +1,45 @@
 $(document).ready(function () {
-    /* 1. 描述排序: 按照引用在 HTML 文档中出现顺序, 把引用的 data-ref 生成无重复值数组
-          descsOrdered */
-    let descs = $("[data-dt]");
-    // descsOrdered 是由 data-ref 构成的无重复数组，按照在HTML文档中出现的顺序
-    let descsOrdered = [];
-    let descsConceptOrdered = [];
+    /* 1. 把描述进行排序 */
+    let descs = $(".description");
+    // descsNameOrdered 是由class为description的元素，的HTML值，构成的无重复数组（按照在HTML文档中出现的顺序）；
+    // descsValueRefOrdered 是由class为description的元素，的href值，构成的无重复数组（按照在HTML文档中出现的顺序）；
+    // descsNameIdOrdered 是由class为description的元素，的id值，构成的无重复数组（按照在HTML文档中出现的顺序）；
+    let descsNameOrdered = [];
+    let descsValueRefOrdered = [];
+    let descsNameIdOrdered = [];
     for (let i = 0; i < descs.length; i++) {
-        let dataRef = descs[i].getAttribute('data-dt');
-        let concept = descs[i].innerHTML;
+        let descName = descs[i].innerHTML;
+        let descValueRef = descs[i].getAttribute('href');
+        let descNameId = "desc" + "-" + descValueRef.substr(1); // 必须去掉#号
+
+        descs[i].setAttribute("id", descNameId);
+
         // array push only if not exist
-        descsOrdered.indexOf(dataRef) === -1 ? descsOrdered.push(dataRef):
-            console.log(dataRef + " already exists");
-        descsConceptOrdered.indexOf(concept) === -1 ?
-            descsConceptOrdered.push(concept):
-            console.log(concept + " already exists");
+        descsNameOrdered.indexOf(descName) === -1 ? descsNameOrdered.push(descName) : console.log(descName + " already exists");
+        descsValueRefOrdered.indexOf(descValueRef) === -1 ? descsValueRefOrdered.push(descValueRef) : console.log(descValueRef + " already exists");
+        descsNameIdOrdered.indexOf(descNameId) === -1 ? descsNameIdOrdered.push(descNameId) : console.log(descNameId + " already exists");
     }
-    
-    /* 2. 生成排好序的 Description list */
-    $(document.body).append("<div><h2>Description List</h2><ul id='descs'></ul>" +
-        "</div>");
-    for (let i = 0; i < descsOrdered.length; i++) {
-        let id = descsOrdered[i];
-        let ttt = document.createElement('li');
-        ttt.innerHTML = "<b>" + descsConceptOrdered[i] + "</b>";
-        // TODO: jquery.min.js:2 Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
-        ttt.appendChild(document.getElementById(id));
-        document.getElementById("descs").appendChild(ttt);
+
+    /* 2. 生成排好序的描述列表，附在最后 */
+    if (descsValueRefOrdered.length > 0) {
+        $(document.body).append("<div><h2>Description List Append</h2><ul id='descriptions-append'></ul></div>");
+        for (let i = 0; i < descsValueRefOrdered.length; i++) {
+            let id = descsValueRefOrdered[i].substring(1);
+            let item = document.createElement('li');
+            // 描述的值: document.getElementById(id)
+            let descValue = document.getElementById(id);
+            let itemValue = descValue;
+            // 描述的名: descsNameOrdered[i]
+            let name = "<b>" + descsNameOrdered[i] + "</b><br>";
+            // 一个 ^ 号
+            let caret = "<a class='caret-anchor' href='#" + descsNameIdOrdered[i] + "'>^</a>";
+            // ^ 描述的名 描述的值
+            $(itemValue).prepend(name);
+            $(itemValue).append(" ", caret);
+            if (itemValue !== null) {
+                item.appendChild(itemValue);
+                document.getElementById('descriptions-append').appendChild(item);
+            }
+        }
     }
 });
